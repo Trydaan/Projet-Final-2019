@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -11,12 +12,15 @@ namespace AboMagAdmin.Models
     {
         public string Nom { get; set; }
 
+        [Display(Name ="Prénom")]
         public string Prenom { get; set; }
 
         public override string Email { get; set; }
 
+        [DataType(DataType.Date), Display(Name ="Date de naissance")]
         public DateTime DateNaissance { get; set; }
 
+        [Display(Name ="Lieu de naissance")]
         public string LieuNaissance { get; set; }
     }
 }

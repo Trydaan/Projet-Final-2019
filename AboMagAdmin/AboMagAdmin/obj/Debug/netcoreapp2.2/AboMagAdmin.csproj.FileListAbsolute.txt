@@ -76,3 +76,8 @@ C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAd
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\AboMagAdmin.dll
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\AboMagAdmin.pdb
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\AboMagAdmin.csproj.CopyComplete
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Create.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Delete.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Details.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Edit.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Index.g.cshtml.cs

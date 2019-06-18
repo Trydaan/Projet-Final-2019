@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AboMagAdmin.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190617122234_EnlevePasswordDeUser")]
-    partial class EnlevePasswordDeUser
+    [Migration("20190618081325_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

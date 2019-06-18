@@ -1,0 +1,51 @@
+﻿@page
+@model AboMagAdmin.Pages.Users.DetailsModel
+
+@{
+    ViewData["Title"] = "Détail";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Détail du client</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Prenom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.DateNaissance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.DateNaissance)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.LieuNaissance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.LieuNaissance)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.User.Id">Valider</a> |
+    <a asp-page="./Index">Retour à la liste</a>
+</div>

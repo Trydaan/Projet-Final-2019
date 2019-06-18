@@ -68,7 +68,7 @@ namespace AboMagAdmin
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, UserManager<User> userManager)
         {
             if (env.IsDevelopment())
             {
@@ -89,6 +89,8 @@ namespace AboMagAdmin
             app.UseAuthentication();
 
             app.UseMvc();
+
+            ApplicationDbInitializer.SeedUsers(userManager);
         }
     }
 }

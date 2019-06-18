@@ -1,0 +1,56 @@
+﻿@page
+@model AboMagAdmin.Pages.Users.CreateModel
+
+@{
+    ViewData["Title"] = "Ajout d'un client";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Nouveau client</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="User.Nom" class="control-label"></label>
+                <input asp-for="User.Nom" class="form-control" />
+                <span asp-validation-for="User.Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Prenom" class="control-label"></label>
+                <input asp-for="User.Prenom" class="form-control" />
+                <span asp-validation-for="User.Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.Email" class="control-label"></label>
+                <input asp-for="User.Email" class="form-control" />
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.DateNaissance" class="control-label"></label>
+                <input asp-for="User.DateNaissance" class="form-control" />
+                <span asp-validation-for="User.DateNaissance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.LieuNaissance" class="control-label"></label>
+                <input asp-for="User.LieuNaissance" class="form-control" />
+                <span asp-validation-for="User.LieuNaissance" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Retour à la liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
