@@ -34,10 +34,23 @@ namespace AboMagAdmin.Pages.Users
                 return Page();
             }
 
-            _context.Users.Add(User);
-            await _context.SaveChangesAsync();
+            var emptyUser = new User();
 
-            return RedirectToPage("./Index");
+            if (await TryUpdateModelAsync<User>(
+                emptyUser, 
+                "user", 
+                u => u.Nom, 
+                u => u.Prenom, 
+                u => u.Email, 
+                u => u.DateNaissance, 
+                u => u.LieuNaissance))
+            {
+                _context.Users.Add(User);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("./Index");
+            }
+
+            return null;            
         }
     }
 }

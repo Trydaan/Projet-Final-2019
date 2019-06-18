@@ -47,11 +47,21 @@ namespace AboMagAdmin.Pages.Users
             }
 
             //_context.Attach(User).State = EntityState.Modified;
-            _context.Entry(User).State = EntityState.Modified;
+            var userToUpdate = await _context.Users.FindAsync(id);
 
             try
             {
-                await _context.SaveChangesAsync();
+                if (await TryUpdateModelAsync<User>(
+                    userToUpdate, 
+                    "User",
+                    u => u.Nom,
+                    u => u.Prenom,
+                    u => u.Email,
+                    u => u.DateNaissance,
+                    u => u.LieuNaissance))
+                {
+                    await _context.SaveChangesAsync();
+                }                                
             }
             catch (DbUpdateConcurrencyException ex)
             {

@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int}"
 @model AboMagAdmin.Pages.Users.DeleteModel
 
 @{
@@ -9,8 +9,8 @@
 <h1>Suppression</h1>
 
 <h3>Êtes-vous sûr de vouloir supprimer ce client?</h3>
-<div>
-    
+<p class="text-danger">@Model.ErrorMessage</p>
+<div>    
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
