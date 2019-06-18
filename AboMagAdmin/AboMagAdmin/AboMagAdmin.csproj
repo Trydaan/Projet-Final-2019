@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-AboMagAdmin-FF6F09FB-C55C-4B5D-AAC5-AA89870D83A4</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190614151656_initial.cs" />
+    <Compile Remove="Data\Migrations\20190614151656_initial.Designer.cs" />
+    <Compile Remove="Migrations\20190617114238_UtiliseUserIdentity.cs" />
+    <Compile Remove="Migrations\20190617114238_UtiliseUserIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20190617120921_UtiliseUserPourIdentity.cs" />
+    <Compile Remove="Migrations\20190617120921_UtiliseUserPourIdentity.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.1" />
+    <PackageReference Include="Sendgrid" Version="9.11.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Data\" />
+    <Folder Include="Data\Migrations\" />
+  </ItemGroup>
+
+</Project>
