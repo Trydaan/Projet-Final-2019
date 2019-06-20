@@ -10,6 +10,8 @@ using AboMagAdmin.Models;
 using static AboMagAdmin.Areas.Identity.Pages.Account.RegisterModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using System.Text.Encodings.Web;
 
 namespace AboMagAdmin.Pages.Users
 {
@@ -17,12 +19,15 @@ namespace AboMagAdmin.Pages.Users
     {
         private readonly AboMagAdmin.Data.ApplicationDbContext _context;
         private readonly UserManager<User> _userManager;
+        private readonly IEmailSender _emailSender;
 
         public CreateModel(AboMagAdmin.Data.ApplicationDbContext context, 
-            UserManager<User> userManager)
+            UserManager<User> userManager,
+            IEmailSender emailSender)
         {
             _context = context;
             _userManager = userManager;
+            _emailSender = emailSender;
         }
 
         public IActionResult OnGet()
@@ -58,13 +63,25 @@ namespace AboMagAdmin.Pages.Users
                 Prenom = User.Prenom,
                 DateNaissance = User.DateNaissance,
                 LieuNaissance = User.LieuNaissance,
-                EmailConfirmed = true
+                EmailConfirmed = !VerifyEmail                
             };
 
             var result = await _userManager.CreateAsync(userToCreate, Password);
 
             if (result.Succeeded)
             {
+                if (VerifyEmail)
+                {
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(userToCreate);
+                    var callbackUrl = Url.Page(
+                        "/Account/ConfirmEmail",
+                        pageHandler: null,
+                        values: new { area = "Identity", userId = userToCreate.Id, code = code },
+                        protocol: Request.Scheme);
+
+                    await _emailSender.SendEmailAsync(userToCreate.Email, "Vérification de votre email",
+                        $"Pour activer votre compte, <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>cliquez ici</a>.");
+                }
                 return RedirectToPage("./Index");
             }
             else
