@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AboMagAdmin.Data
 {
-    public class ApplicationDbInitializer
+    public static class ApplicationDbInitializer
     {
         //Initialise la base avec un compte admin
         public static void SeedUsers(UserManager<User> userManager)
@@ -19,10 +19,9 @@ namespace AboMagAdmin.Data
                     Nom = "Lequeu",
                     Prenom = "Baptiste",
                     Email = "admin@abomag.com",
-                    DateNaissance = DateTime.Parse("28/01/1995")
                 };
 
-                IdentityResult result = userManager.CreateAsync(user, "admin").Result;
+                IdentityResult result = userManager.CreateAsync(user, "Admin1995").Result;
 
                 //TODO: Roles pas encore implémenté
                 //if (result.Succeeded)

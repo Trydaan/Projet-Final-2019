@@ -42,6 +42,7 @@ namespace AboMagAdmin
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireNonAlphanumeric = false;
+               
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>

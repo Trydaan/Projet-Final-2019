@@ -2,18 +2,19 @@
 @model AboMagAdmin.Pages.Users.IndexModel
 
 @{
-    ViewData["Title"] = "Liste des utilisateurs";
+    ViewData["Title"] = "Liste des clients";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="./Create">Nouveau client</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.User[0].Nom)
             </th>
@@ -35,6 +36,9 @@
     <tbody>
 @foreach (var item in Model.User) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nom)
             </td>
