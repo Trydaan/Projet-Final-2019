@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -22,5 +23,20 @@ namespace AboMagAdmin.Models
 
         [Display(Name ="Lieu de naissance")]
         public string LieuNaissance { get; set; }
+
+        public List<Abonnement> Abonnements { get; set; }
+
+        [NotMapped]
+        public string NomComplet
+        {
+            get
+            {
+                if ((Prenom != String.Empty) && (Nom != String.Empty))
+                {
+                    return Prenom + " " + Nom;
+                }
+                return Email;
+            }            
+        }        
     }
 }

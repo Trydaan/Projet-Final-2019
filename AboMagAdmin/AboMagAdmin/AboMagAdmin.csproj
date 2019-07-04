@@ -17,6 +17,8 @@
     <Compile Remove="Migrations\20190617120921_UtiliseUserPourIdentity.Designer.cs" />
     <Compile Remove="Migrations\20190617122234_EnlevePasswordDeUser.cs" />
     <Compile Remove="Migrations\20190617122234_EnlevePasswordDeUser.Designer.cs" />
+    <Compile Remove="Migrations\20190704120524_test.cs" />
+    <Compile Remove="Migrations\20190704120524_test.Designer.cs" />
   </ItemGroup>
 
 

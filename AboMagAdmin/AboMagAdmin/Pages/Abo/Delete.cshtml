@@ -1,0 +1,47 @@
+﻿@page
+@model AboMagAdmin.Pages.Abo.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Abonnement</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Debut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.Debut)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Fin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.Fin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Magazine)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.Magazine.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.User)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.User.Id)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Abonnement.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

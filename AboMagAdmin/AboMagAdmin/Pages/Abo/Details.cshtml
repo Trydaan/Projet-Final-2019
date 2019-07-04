@@ -1,0 +1,46 @@
+﻿@page
+@model AboMagAdmin.Pages.Abo.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Abonnement</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Debut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.Debut)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Fin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Abonnement.Fin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.Magazine)
+        </dt>
+        <dd class="col-sm-10">
+            <a asp-page="/Magazines/Details" asp-route-id="@Model.Abonnement.MagazineId">@Model.Abonnement.Magazine.Titre</a>
+            
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Abonnement.User)
+        </dt>
+        <dd class="col-sm-10">
+            <a asp-page="/Users/Details" asp-route-id="@Model.Abonnement.UserId">@Model.Abonnement.User.NomComplet</a>
+            
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Abonnement.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

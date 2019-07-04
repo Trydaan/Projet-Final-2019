@@ -19,6 +19,46 @@ namespace AboMagAdmin.Migrations
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
+            modelBuilder.Entity("AboMagAdmin.Models.Abonnement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Debut");
+
+                    b.Property<DateTime>("Fin");
+
+                    b.Property<int>("MagazineId");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MagazineId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Abonnements");
+                });
+
+            modelBuilder.Entity("AboMagAdmin.Models.Magazine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("Nb");
+
+                    b.Property<double>("PrixAnnuel");
+
+                    b.Property<string>("Titre");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Magazines");
+                });
+
             modelBuilder.Entity("AboMagAdmin.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -183,6 +223,19 @@ namespace AboMagAdmin.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AboMagAdmin.Models.Abonnement", b =>
+                {
+                    b.HasOne("AboMagAdmin.Models.Magazine", "Magazine")
+                        .WithMany("Abonnements")
+                        .HasForeignKey("MagazineId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AboMagAdmin.Models.User", "User")
+                        .WithMany("Abonnements")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

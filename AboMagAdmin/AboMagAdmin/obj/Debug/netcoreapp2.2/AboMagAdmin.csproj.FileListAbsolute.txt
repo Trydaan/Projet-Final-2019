@@ -81,3 +81,14 @@ C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAd
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Details.g.cshtml.cs
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Edit.g.cshtml.cs
 C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Index.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ResendEmailConfirmation.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Magazines\Create.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Magazines\Delete.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Magazines\Details.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Magazines\Edit.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Magazines\Index.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Abo\Create.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Abo\Delete.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Abo\Details.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Abo\Edit.g.cshtml.cs
+C:\Users\Baptiste Lequeu\Documents\GitHub\Projet-Final-2019\AboMagAdmin\AboMagAdmin\obj\Debug\netcoreapp2.2\Razor\Pages\Abo\Index.g.cshtml.cs
